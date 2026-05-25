@@ -4,35 +4,57 @@ template.innerHTML = `
   <style>
     :host {
       display: block;
-      --dashboard-bg: #f8fafc;
-      --dashboard-border: #dbe3ee;
+      --dashboard-bg: #f3c4d8;
+      --dashboard-border: #c48aa5;
     }
 
     .dashboard {
       background: var(--dashboard-bg);
-      border: 2px solid var(--dashboard-border);
-      border-radius: 28px;
+      border: 3px solid var(--dashboard-border);
+      border-radius: 22px;
       padding: 2rem;
-      width: min(950px, 94vw);
+      width: min(720px, 94vw);
+      min-height: 420px;
       display: grid;
-      gap: 1.5rem;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+      place-items: center;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12);
     }
 
     .content {
+      width: 100%;
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 1.5rem;
-      align-items: stretch;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "card weather"
+        "badge badge";
+      gap: 3rem;
+      align-items: center;
+      justify-items: center;
+    }
+
+    ::slotted(user-card) {
+      grid-area: card;
+      width: 220px;
+    }
+
+    ::slotted(weather-time) {
+      grid-area: weather;
+      width: 260px;
     }
 
     ::slotted(warning-badge) {
-      grid-column: 1 / -1;
+      grid-area: badge;
+      width: 340px;
     }
 
     @media (max-width: 760px) {
       .content {
         grid-template-columns: 1fr;
+        grid-template-areas:
+          "card"
+          "weather"
+          "badge";
+        gap: 1.5rem;
       }
     }
   </style>

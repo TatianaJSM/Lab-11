@@ -17,30 +17,32 @@ body {
 
 /* Variables CSS */
 user-dashboard {
-  --dashboard-bg: #ffffff;
-  --dashboard-border: #cbd5e1;
+  --dashboard-bg: #f3c4d8;
+  --dashboard-border: #c48aa5;
 }
 
 user-card {
-  --card-accent: #2563eb;
+  --card-bg: #d9ecff;
+  --card-accent: #7db5e8;
 }
 
 weather-time {
-  --weather-bg: #0284c7;
+  --weather-bg: #c7f2d4;
+  --weather-color: #1f2937;
 }
 
 warning-badge {
-  --warning-bg: #fbbf24;
-  --warning-color: #111827;
+  --warning-bg: #dff2c7;
+  --warning-color: #1f2937;
 }
 
 /* CSS Parts */
 user-dashboard::part(dashboard) {
-  border: 3px solid #bfdbfe;
+  border: 3px solid #c48aa5;
 }
 
 user-card::part(card) {
-  border: 2px solid #dbeafe;
+  border: 2px solid #7db5e8;
 }
 
 user-card::part(button) {
@@ -48,7 +50,7 @@ user-card::part(button) {
 }
 
 weather-time::part(weather) {
-  border: 2px solid #bae6fd;
+  border: 2px solid #75c792;
 }
 
 warning-badge::part(badge) {
