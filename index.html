@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 11 - User Dashboard</title>
+
+  <link rel="stylesheet" href="./css/global.css" />
+  <script type="module" src="./main.js" defer></script>
+</head>
+
+<body>
+  <main class="page">
+    <user-dashboard>
+      <user-card
+        avatar="https://i.pravatar.cc/120?img=12"
+        name="Alonso"
+        role="Profesor"
+      ></user-card>
+
+      <weather-time
+        city="Liberia"
+        temperature="31 °C"
+        status="Sunny"
+      ></weather-time>
+
+      <warning-badge pulsing>
+        Sesión por expirar
+      </warning-badge>
+    </user-dashboard>
+  </main>
+</body>
+</html>
